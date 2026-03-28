@@ -89,14 +89,14 @@
 </body>
 </html>
 <style>
-  /* Snow container covers whole page, pointer-events none so clicks work */
+  /* Snow container covers the whole page */
   .snow-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    pointer-events: none; /* clicks go through */
     overflow: hidden;
     z-index: 9999;
   }
@@ -105,15 +105,23 @@
     position: absolute;
     top: -10px;
     color: white;
-    font-size: 8px; /* small snowflakes */
-    opacity: 0.8;
+    opacity: 0.5;
     user-select: none;
-    animation: fall linear infinite;
+    font-size: 6px;
+    animation-name: fall, drift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+  }
+
+  @keyframes drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(0); }
   }
 </style>
 
@@ -121,17 +129,23 @@
 
 <script>
   const container = document.querySelector('.snow-container');
-  const snowflakeCount = 100; // more for heavy snowfall
+  const snowflakeCount = 100;
 
   for (let i = 0; i < snowflakeCount; i++) {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
-    snowflake.textContent = '❄'; // subtle snow
+    snowflake.textContent = '❄';
+    
+    // Random position and size
     snowflake.style.left = Math.random() * 100 + 'vw';
-    snowflake.style.fontSize = (Math.random() * 6 + 6) + 'px'; // subtle sizes
-    snowflake.style.opacity = Math.random() * 0.6 + 0.4;
-    snowflake.style.animationDuration = (Math.random() * 10 + 10) + 's'; // slow, elegant fall
-    snowflake.style.animationDelay = Math.random() * 10 + 's';
+    const size = Math.random() * 6 + 4;
+    snowflake.style.fontSize = size + 'px';
+    snowflake.style.opacity = Math.random() * 0.5 + 0.3;
+
+    // Random animation duration for falling
+    snowflake.style.animationDuration = (Math.random() * 15 + 10) + 's, ' + (Math.random() * 4 + 3) + 's';
+    snowflake.style.animationDelay = Math.random() * 15 + 's';
+
     container.appendChild(snowflake);
   }
 </script>
