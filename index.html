@@ -1,151 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DUAL H PHOTOGRAPHY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity One Photography Studio</title>
 
-    <!-- MOBILE FIX -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: black;
-            color: white;
-            text-align: center;
-        }
-
-       header {
-    background: #111;
-    padding: 15px;
-    color: gold;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-        section {
-            padding: 20px;
-        }
+body {
+    background: #0F0F0F;
+    color: #fff;
+}
 
-        h2 {
-            color: lime;
-            font-size: 18px;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #000;
+}
 
-        p {
-            font-size: 14px;
-        }
+header h1 {
+    font-size: 20px;
+}
 
-        .box {
-            margin: 10px auto;
-            padding: 15px;
-            border: 1px solid gray;
-            width: 90%;
-            border-radius: 10px;
-        }
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
 
-        button {
-            padding: 12px;
-            background: gold;
-            border: none;
-            cursor: pointer;
-            width: 80%;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32') center/cover;
+}
 
-        a {
-            text-decoration: none;
-        }
-    </style>
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
+.hero p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #FF6B35;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    background: #1a1a1a;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.gallery img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media(max-width:768px){
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <img src="logoking.png" width="200"><br>
-    DUAL H PHOTOGRAPHY
+    <h1>Gravity One Studio</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
-<section>
-    <h2>🎬 Welcome</h2>
-    <p>Capturing your special moments with cinematic style 💍</p>
+
+<section class="hero">
+    <div>
+        <h2>Capture Moments That Matter</h2>
+        <p>Fast, Affordable & Trusted by 600+ Clients ⭐ 4.9</p>
+        <a href="tel:09962205752" class="btn">Call Now</a>
+        <a href="#" class="btn">Book Now</a>
+    </div>
 </section>
 
-<section>
-    <h2>💼 Services</h2>
-
-    <div class="box">📸 Wedding Photography</div>
-    <div class="box">🎥 Cinematic Video Editing</div>
-    <div class="box">📱 Instagram Reels Creation</div>
+<section class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">Passport Photos</div>
+        <div class="service-box">Candid Photography</div>
+        <div class="service-box">Event Shoots</div>
+        <div class="service-box">Photo Editing</div>
+        <div class="service-box">Instant Prints</div>
+    </div>
 </section>
 
-<section>
-    <h2>📞 Contact Us</h2>
-    <p>Click below to chat with us</p>
-
-    <a href="https://wa.me/917708728477">
-        <button>💬 WhatsApp Us</button>
-    </a>
+<section class="section gallery">
+    <h2>Our Work</h2>
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+    <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0">
 </section>
+
+<section class="section">
+    <h2>Why Choose Us</h2>
+    <p>✔ 4.9 Rated Studio</p>
+    <p>✔ Affordable Pricing</p>
+    <p>✔ Fast Delivery</p>
+    <p>✔ Friendly Team</p>
+</section>
+
+<section class="section">
+    <h2>Contact Us</h2>
+    <p>📍 Kolathur Road, Mambakkam</p>
+    <p>📞 099622 05752</p>
+    <p>🕒 Open till 9:30 PM</p>
+</section>
+
+<footer>
+    <p>© 2026 Gravity One Photography Studio</p>
+</footer>
 
 </body>
 </html>
-<style>
-  /* Snow container covers the whole page */
-  .snow-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* clicks go through */
-    overflow: hidden;
-    z-index: 9999;
-  }
-
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    opacity: 0.5;
-    user-select: none;
-    font-size: 6px;
-    animation-name: fall, drift;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes fall {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
-  }
-
-  @keyframes drift {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(30px); }
-    100% { transform: translateX(0); }
-  }
-</style>
-
-<div class="snow-container"></div>
-
-<script>
-  const container = document.querySelector('.snow-container');
-  const snowflakeCount = 100;
-
-  for (let i = 0; i < snowflakeCount; i++) {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.textContent = '❄';
-    
-    // Random position and size
-    snowflake.style.left = Math.random() * 100 + 'vw';
-    const size = Math.random() * 6 + 4;
-    snowflake.style.fontSize = size + 'px';
-    snowflake.style.opacity = Math.random() * 0.5 + 0.3;
-
-    // Random animation duration for falling
-    snowflake.style.animationDuration = (Math.random() * 15 + 10) + 's, ' + (Math.random() * 4 + 3) + 's';
-    snowflake.style.animationDelay = Math.random() * 15 + 's';
-
-    container.appendChild(snowflake);
-  }
-</script>
